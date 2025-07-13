@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>加入我們｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f4fcf6;
+    }
+    .hero-join {
+      background: linear-gradient(180deg, #c8e6c9, #f0fdf4);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero-join h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+    }
+    .hero-join p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #4e944f;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .join-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .join-card {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .join-card:hover {
+      transform: translateY(-8px);
+    }
+    .join-card i {
+      font-size: 2.4rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+    .join-card h3 {
+      margin-bottom: 0.5rem;
+      color: #388e3c;
+    }
+    .join-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .join-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #2e7d32;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .join-card a:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-join" data-aos="fade-in">
+        <h1>加入綠色聯盟</h1>
+        <p>每一份支持，都是為地球多做一點努力。讓我們一起推動永續未來。</p>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">你可以怎麼參與？</h2>
+        <div class="join-options">
+          <div class="join-card" data-aos="zoom-in">
+            <i class="fas fa-hands-helping"></i>
+            <h3>成為志工</h3>
+            <p>加入我們的行動行列，一起參與淨灘、講座、市集等活動。</p>
+            <a href="/register.html">志工註冊</a>
+          </div>
+          <div class="join-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>小額捐款</h3>
+            <p>你的每一份捐款，都是支持永續實踐與教育推廣的重要資源。</p>
+            <a href="/donatiom.html">我要捐款</a>
+          </div>
+          <div class="join-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-briefcase"></i>
+            <h3>品牌合作</h3>
+            <p>歡迎企業、工作室、品牌與我們共同策劃綠色活動或市集。</p>
+            <a href="/cooperation.html">申請合作</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

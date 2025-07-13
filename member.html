@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員中心｜綠色聯盟</title>
+  <link rel="stylesheet" href="/member.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f3fff5;
+    }
+    .member-container {
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 240px;
+      background: #2e7d32;
+      color: white;
+      padding: 2rem 1rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .sidebar h2 {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .sidebar a {
+      display: block;
+      color: #c8e6c9;
+      text-decoration: none;
+      margin: 1rem 0;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #fff;
+      transform: translateX(4px);
+    }
+    .main-content {
+      flex: 1;
+      padding: 2.5rem 2rem;
+    }
+    .welcome-box {
+      background: #ffffffcc;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    .welcome-box h1 {
+      color: #2e7d32;
+      margin: 0;
+    }
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .quick-card {
+      background: #eafbea;
+      padding: 1.2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+    .quick-card:hover {
+      transform: translateY(-5px);
+    }
+    .quick-card i {
+      font-size: 2rem;
+      color: #4caf50;
+      margin-bottom: 0.5rem;
+    }
+    .quick-card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <div class="member-container">
+      <aside class="sidebar">
+        <h2>會員中心</h2>
+        <a href="/profile.html">我的資料</a>
+        <a href="/events.html">活動紀錄</a>
+        <a href="#">捐款紀錄</a>
+        <a href="#">我的徽章</a>
+        <a href="#">登出</a>
+      </aside>
+
+      <main class="main-content">
+        <div class="welcome-box" data-aos="fade-in">
+          <h1>歡迎回來，綠色行動者！</h1>
+          <p>這裡可以查看你的參與紀錄與個人資訊。</p>
+        </div>
+
+        <div class="quick-links">
+          <div class="quick-card" data-aos="fade-up">
+            <i class="fas fa-seedling"></i>
+            <h3>我的活動</h3>
+          </div>
+          <div class="quick-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-donate"></i>
+            <h3>捐款記錄</h3>
+          </div>
+          <div class="quick-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-id-badge"></i>
+            <h3>徽章牆</h3>
+          </div>
+          <div class="quick-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-user-cog"></i>
+            <h3>修改資料</h3>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

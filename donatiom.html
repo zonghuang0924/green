@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我要捐款｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f3fff5;
+      margin: 0;
+    }
+    .donate-container {
+      max-width: 720px;
+      margin: 4rem auto;
+      background: #ffffffcc;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 2rem;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+    .form-actions {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .form-actions button {
+      background: #2e7d32;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .form-actions button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+
+  <section class="donate-container" data-aos="fade-up">
+    <h1>我要捐款</h1>
+    <form action="#" method="POST">
+      <label for="name">捐款人姓名</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">電子信箱</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="amount">捐款金額</label>
+      <select id="amount" name="amount">
+        <option value="100">NT$100</option>
+        <option value="500">NT$500</option>
+        <option value="1000">NT$1000</option>
+        <option value="other">其他金額</option>
+      </select>
+
+      <label for="message">留言（選填）</label>
+      <input type="text" id="message" name="message" />
+
+      <section class="section cta-banner" data-aos="zoom-in">
+        <a href="/pay.html">立即付款</a>
+      </section>
+    </form>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });</script>
+</body>
+</html>

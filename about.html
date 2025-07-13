@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於我們｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f5fcf6;
+      overflow-x: hidden;
+    }
+    .hero-about {
+      background: linear-gradient(160deg, #dcedc8, #f0fdf4);
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+    .hero-about h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+    }
+    .hero-about p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #4e944f;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .timeline {
+      border-left: 4px solid #a5d6a7;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .timeline-entry {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -1.15rem;
+      top: 0.2rem;
+      width: 1rem;
+      height: 1rem;
+      background: #66bb6a;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px #c8e6c9;
+    }
+    .timeline-entry h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #388e3c;
+    }
+    .timeline-entry p {
+      margin: 0.3rem 0 0;
+      color: #555;
+    }
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .value-box {
+      background: #ffffffcc;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 320px;
+      flex: 1 1 260px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .value-box:hover {
+      transform: translateY(-8px);
+    }
+    .value-box i {
+      font-size: 2rem;
+      color: #4caf50;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-about" data-aos="fade-in">
+        <h1>關於綠色聯盟</h1>
+        <p>我們是一群致力於永續與自然共生的行動者，從社區扎根，走向世界。</p>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">我們的願景</h2>
+        <div class="values">
+          <div class="value-box" data-aos="zoom-in"><i class="fas fa-leaf"></i><h3>生態共存</h3><p>打造與自然共生的城市與生活方式。</p></div>
+          <div class="value-box" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-bolt"></i><h3>綠色創新</h3><p>推動綠能技術、永續產品與未來產業。</p></div>
+          <div class="value-box" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-users"></i><h3>社會行動</h3><p>凝聚志工與公民力量，實踐環境正義。</p></div>
+        </div>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">我們的歷程</h2>
+        <div class="timeline">
+          <div class="timeline-entry" data-aos="fade-up">
+            <h3>2023 年 - 種子萌芽</h3>
+            <p>初步組成團隊，進行綠色倡議與志工組織。</p>
+          </div>
+          <div class="timeline-entry" data-aos="fade-up" data-aos-delay="100">
+            <h3>2024 年 - 擴大行動</h3>
+            <p>舉辦多場淨灘、市集、講座，與地方政府合作。</p>
+          </div>
+          <div class="timeline-entry" data-aos="fade-up" data-aos-delay="200">
+            <h3>2025 年 - Nexegreen 啟動</h3>
+            <p>結合科技與社群，啟動綠色商場與官方平台。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

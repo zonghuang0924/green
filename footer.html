@@ -1,0 +1,130 @@
+<footer>
+  <div class="footer-container">
+    <div class="footer-column logo-column">
+      <img src="/assets/logo-green.svg" alt="Nexegreen 綠色聯盟 Logo" class="footer-logo" />
+      <p class="slogan">與地球同行．與未來連結</p>
+    </div>
+
+    <div class="footer-column link-column">
+      <h4>快速連結</h4>
+      <ul>
+        <li><a href="/about.html">關於我們</a></li>
+        <li><a href="/actions.html">我們的行動</a></li>
+        <li><a href="/market.html">綠色商場</a></li>
+        <li><a href="/join.html">加入我們</a></li>
+        <li><a href="/news.html">最新消息</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column contact-column">
+      <h4>聯絡我們</h4>
+      <p>信箱：hello@nexegreen.org</p>
+      <p>地址：台北市中正區永續路 77 號</p>
+    </div>
+
+    <div class="footer-column social-column">
+      <h4>追蹤我們</h4>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-line fa-lg"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nexegreen 綠色聯盟｜由 Nexelink 技術支持</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #f8fdf5;
+    color: #2e7d32;
+    padding: 3rem 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+    gap: 2rem;
+  }
+
+  .footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: #388e3c;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-column ul li a {
+    color: #2e7d32;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    width: 48px;
+    margin-bottom: 0.5rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  .social-icons a {
+    margin-right: 0.8rem;
+    color: #2e7d32;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: translateY(-4px) scale(1.1);
+    color: #1b5e20;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #d8e8d2;
+    font-size: 0.85rem;
+    color: #4caf50;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-column {
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+    }
+  }
+</style>
+
+<!-- Font Awesome 依然由 nav 載入即可，不需重複引入 -->

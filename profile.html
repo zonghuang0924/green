@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>個人資料設定｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/member.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    .form-section {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: #ffffffcc;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .form-section h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 1.5rem;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .form-actions {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    form button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="form-section" data-aos="fade-up">
+        <h2>編輯個人資料</h2>
+        <form action="#" method="POST">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" value="王小綠" required />
+
+          <label for="email">Email（無法修改）</label>
+          <input type="email" id="email" name="email" value="user@example.com" disabled />
+
+          <label for="location">所在地區</label>
+          <select id="location" name="location">
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="台中市">台中市</option>
+            <option value="高雄市">高雄市</option>
+          </select>
+
+          <label for="password">變更密碼（選填）</label>
+          <input type="password" id="password" name="password" />
+
+          <div class="form-actions">
+            <button type="submit">儲存變更</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

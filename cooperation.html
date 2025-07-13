@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>申請合作｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f3fff5;
+      margin: 0;
+    }
+    .cooperate-container {
+      max-width: 720px;
+      margin: 4rem auto;
+      background: #ffffffcc;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 2rem;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-actions {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .form-actions button {
+      background: #2e7d32;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .form-actions button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+
+  <section class="cooperate-container" data-aos="fade-up">
+    <h1>申請合作</h1>
+    <form action="#" method="POST">
+      <label for="org">單位／公司名稱</label>
+      <input type="text" id="org" name="org" required />
+
+      <label for="name">聯絡人姓名</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">電子信箱</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">聯絡電話</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="content">合作提案內容</label>
+      <textarea id="content" name="content" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit">提交申請</button>
+      </div>
+    </form>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });</script>
+</body>
+</html>

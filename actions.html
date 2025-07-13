@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我們的行動｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f8fef9;
+    }
+    .hero-actions {
+      background: linear-gradient(180deg, #d0f0c0, #f5fff5);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero-actions h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    .hero-actions p {
+      color: #4e944f;
+      font-size: 1.1rem;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 2rem;
+    }
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .action-card {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 2rem;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .action-card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+    .action-card i {
+      font-size: 2.4rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+    .action-card h3 {
+      color: #388e3c;
+      margin-bottom: 0.5rem;
+    }
+    .action-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-actions" data-aos="fade-in">
+        <h1>我們的行動</h1>
+        <p>從一場淨灘到一座商場，綠色聯盟正在實踐改變世界的每一步。</p>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">行動項目</h2>
+        <div class="action-grid">
+          <div class="action-card" data-aos="zoom-in">
+            <i class="fas fa-water"></i>
+            <h3>淨灘行動</h3>
+            <p>每月發起全台海岸清潔行動，守護我們的藍色國土。</p>
+          </div>
+          <div class="action-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-seedling"></i>
+            <h3>社區綠化</h3>
+            <p>與學校與鄰里合作種樹綠美化，提升都市生態韌性。</p>
+          </div>
+          <div class="action-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-store"></i>
+            <h3>綠色市集</h3>
+            <p>結合環保商品與在地品牌，推動綠色消費。</p>
+          </div>
+          <div class="action-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>環境講座</h3>
+            <p>舉辦校園、社區教育活動，提升公眾環境意識。</p>
+          </div>
+          <div class="action-card" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fas fa-users"></i>
+            <h3>志工行動</h3>
+            <p>打造志工平台，鼓勵全民參與氣候與環保行動。</p>
+          </div>
+          <div class="action-card" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fas fa-solar-panel"></i>
+            <h3>綠能實驗</h3>
+            <p>結合大學與新創合作，開發太陽能與永續能源應用。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

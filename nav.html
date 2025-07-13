@@ -1,0 +1,159 @@
+<header id="main-header" class="nav-default">
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Lottie 動畫 LOGO -->
+      <a href="/index.html" class="logo-link">
+        <lottie-player src="/assets/logo-lottie.json" background="transparent" speed="1" style="width: 48px; height: 48px;" loop autoplay></lottie-player>
+        <span class="brand-text">Nexegreen 綠色聯盟</span>
+      </a>
+    </div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars"></i></label>
+
+    <ul class="nav-links">
+      <li><a href="/about.html"><i class="fas fa-leaf"></i> 關於</a></li>
+      <li><a href="/actions.html"><i class="fas fa-hands-helping"></i> 行動</a></li>
+      <li><a href="/market.html"><i class="fas fa-store"></i> 商場</a></li>
+      <li><a href="/join.html"><i class="fas fa-user-plus"></i> 加入</a></li>
+      <li><a href="/news.html"><i class="fas fa-bullhorn"></i> 新聞</a></li>
+      <li><a href="/policy.html"><i class="fas fa-file-alt"></i> 政策</a></li>
+      <li><a href="/contact.html"><i class="fas fa-envelope"></i> 聯絡</a></li>
+      <li><a href="/login.html" class="btn-login"><i class="fas fa-user-circle"></i> 會員</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Lottie Player CDN -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.4s ease;
+  }
+
+  .nav-default {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-scrolled {
+    background: #ffffffee;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    backdrop-filter: blur(6px);
+  }
+
+  .navbar {
+    max-width: 1280px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.1rem;
+    gap: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .brand-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+  }
+
+  .nav-links a {
+    color: #2e7d32;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-links a:hover {
+    color: #1b5e20;
+    transform: scale(1.05);
+  }
+
+  .btn-login {
+    background: #2e7d32;
+    color: white !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-login:hover {
+    background: #1b5e20;
+    transform: scale(1.05);
+  }
+
+  /* 漢堡選單樣式 */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2e7d32;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: #f0fdf4;
+      display: none;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links li {
+      margin: 0.8rem 0;
+    }
+
+    .nav-toggle-label {
+      display: block;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-links {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  // 捲動變色效果
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("main-header");
+    if (window.scrollY > 60) {
+      header.classList.add("nav-scrolled");
+    } else {
+      header.classList.remove("nav-scrolled");
+    }
+  });
+</script>

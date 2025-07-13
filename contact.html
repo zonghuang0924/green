@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f4fff7;
+      color: #333;
+    }
+    .hero-contact {
+      background: linear-gradient(180deg, #c8e6c9, #f0fdf4);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .hero-contact h1 {
+      font-size: 2.4rem;
+      color: #2e7d32;
+    }
+    .contact-section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    form button {
+      margin-top: 2rem;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #1b5e20;
+    }
+    .info-box {
+      margin-top: 2rem;
+      text-align: center;
+      color: #666;
+    }
+    .info-box i {
+      color: #4caf50;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-contact" data-aos="fade-in">
+        <h1>聯絡我們</h1>
+        <p>歡迎留言、提案、合作或任何建議，我們會盡快回覆。</p>
+      </section>
+
+      <section class="contact-section" data-aos="fade-up">
+        <form action="#" method="POST">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">留言內容</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">送出留言</button>
+        </form>
+
+        <div class="info-box" data-aos="fade-up">
+          <p><i class="fas fa-envelope"></i> service@nexegreen.org</p>
+          <p><i class="fas fa-phone"></i> (02) 1234-5678</p>
+          <p><i class="fas fa-map-marker-alt"></i> 台北市信義區永續大道 88 號</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>綠色商場｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f3fdf6;
+    }
+    .hero-market {
+      background: linear-gradient(180deg, #dcedc8, #f0fdf4);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero-market h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+    }
+    .hero-market p {
+      font-size: 1.1rem;
+      color: #4e944f;
+      margin-top: 1rem;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .market-overview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .market-overview img {
+      max-width: 480px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      flex: 1 1 300px;
+    }
+    .market-overview .text {
+      flex: 1 1 300px;
+    }
+    .text p {
+      color: #555;
+      line-height: 1.8;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .feature-box {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .feature-box:hover {
+      transform: translateY(-6px);
+    }
+    .feature-box i {
+      font-size: 2rem;
+      color: #43a047;
+      margin-bottom: 0.5rem;
+    }
+    .feature-box h4 {
+      margin: 0.5rem 0;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-market" data-aos="fade-in">
+        <h1>綠色商場</h1>
+        <p>我們正在打造全台首座結合永續建築、美學設計與綠能系統的共享空間。</p>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">商場概覽</h2>
+        <div class="market-overview">
+          <img src="/assets/market-visual.jpg" alt="商場示意圖" />
+          <div class="text">
+            <p>
+              綠色商場是我們的重要旗艦計畫，目標打造一個結合自然、綠能、社區與文化的新型空間。
+              商場內部將採用開放空間設計，導入太陽能系統、雨水回收、在地木建材等永續技術，並邀請本地品牌進駐，成為實驗型綠色生活平台。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">設計特色</h2>
+        <div class="features">
+          <div class="feature-box" data-aos="zoom-in"><i class="fas fa-solar-panel"></i><h4>太陽能供電</h4><p>頂樓太陽能板供應全天候部分電力。</p></div>
+          <div class="feature-box" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-water"></i><h4>雨水循環</h4><p>地下儲水回收灌溉系統。</p></div>
+          <div class="feature-box" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-seedling"></i><h4>綠化牆面</h4><p>立體植栽牆，提升城市綠覆率與美觀。</p></div>
+          <div class="feature-box" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-recycle"></i><h4>資源循環</h4><p>進駐店家採用環保包裝與二次利用機制。</p></div>
+          <div class="feature-box" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-handshake"></i><h4>社區共享</h4><p>空間可用於展演、手作市集、社區活動。</p></div>
+          <div class="feature-box" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-building"></i><h4>永續建築</h4><p>獲LEED、EEWH等綠建築認證設計標準。</p></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

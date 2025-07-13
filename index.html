@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>綠色聯盟｜Nexegreen</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f0fdf4;
+      overflow-x: hidden;
+    }
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, #c8e6c9, #f0fdf4);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #2e7d32;
+      animation: typing 2s steps(20), blink 0.7s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #2e7d32;
+      max-width: 100%;
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #4e944f;
+    }
+    .hero img {
+      max-width: 400px;
+      margin-top: 2rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    .wave-divider {
+      margin-top: -1px;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+      transition: 0.3s;
+    }
+    .news-card {
+      background: #e8f5e9;
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .news-card:hover {
+      transform: scale(1.02);
+    }
+    .cta-banner {
+      background: radial-gradient(circle at center, #c5e1a5, #aed581);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 2rem;
+      color: #1b5e20;
+      margin-top: 5rem;
+      animation: pulse-bg 6s ease-in-out infinite;
+    }
+    @keyframes pulse-bg {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .cta-banner a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #2e7d32;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta-banner a:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero" data-aos="fade-in">
+        <h1>我們與地球同行</h1>
+        <p>綠色聯盟致力推動永續、淨零、自然共生的未來。</p>
+        <img src="/assets/hero-earth.svg" alt="地球插圖" />
+      </section>
+      <svg class="wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#f0fdf4" d="M0,32L1440,100L1440,0L0,0Z"></path></svg>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">我們的行動</h2>
+        <div class="cards">
+          <div class="card" data-aos="zoom-in"><i class="fas fa-seedling"></i><h3>淨灘行動</h3><p>清理海洋，守護未來。</p></div>
+          <div class="card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-store"></i><h3>綠色市集</h3><p>支持在地永續品牌。</p></div>
+          <div class="card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-users"></i><h3>環境教育</h3><p>推動生態與氣候意識。</p></div>
+          <div class="card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-solar-panel"></i><h3>綠色商場</h3><p>打造低碳生活場域。</p></div>
+        </div>
+      </section>
+
+      <section class="section" data-aos="fade-up">
+        <h2 class="section-title">最新消息</h2>
+        <div class="cards">
+          <div class="news-card"><h4>🌿 7/20 永續講座開放報名</h4><p>主題：「零碳建築與社會創新」即日起開放。</p></div>
+          <div class="news-card"><h4>🍀 綠市集 7/27～7/28 登場</h4><p>華山快閃，邀請你一同體驗低碳生活！</p></div>
+          <div class="news-card"><h4>🌱 募資已突破第一階段</h4><p>我們已完成商場啟動資金感謝支持！</p></div>
+        </div>
+      </section>
+
+      <section class="section cta-banner" data-aos="zoom-in">
+        <h3>加入我們，一起實現綠色未來</h3>
+        <a href="/join.html">立即參與</a>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });
+  </script>
+</body>
+</html>

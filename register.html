@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>註冊會員｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #e9fdf1;
+    }
+    .hero-register {
+      background: linear-gradient(180deg, #a5d6a7, #e8f5e9);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .hero-register h1 {
+      font-size: 2.4rem;
+      color: #2e7d32;
+    }
+    .form-section {
+      max-width: 480px;
+      margin: 3rem auto;
+      background: #ffffffcc;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      margin-top: 2rem;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-register" data-aos="fade-in">
+        <h1>註冊成為會員</h1>
+        <p>加入我們，一起實踐綠色未來！</p>
+      </section>
+
+      <section class="form-section" data-aos="fade-up">
+        <form action="#" method="POST">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">密碼</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="confirm">確認密碼</label>
+          <input type="password" id="confirm" name="confirm" required />
+
+          <label for="area">所在地區</label>
+          <select id="area" name="area">
+            <option value="">請選擇</option>
+            <option>台北市</option>
+            <option>新北市</option>
+            <option>桃園市</option>
+            <option>台中市</option>
+            <option>台南市</option>
+            <option>高雄市</option>
+            <option>其他</option>
+          </select>
+
+          <button type="submit">註冊</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最新消息｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f1fdf3;
+    }
+    .hero-news {
+      background: linear-gradient(180deg, #d0f0c0, #f0fff4);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero-news h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+    }
+    .hero-news p {
+      font-size: 1.1rem;
+      color: #4e944f;
+      margin-top: 1rem;
+    }
+    .news-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .news-card {
+      background: #ffffffcc;
+      backdrop-filter: blur(3px);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover {
+      transform: translateY(-6px);
+    }
+    .news-card h3 {
+      margin-top: 0.5rem;
+      color: #2e7d32;
+    }
+    .news-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .news-date {
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+    <main class="content">
+      <section class="hero-news" data-aos="fade-in">
+        <h1>最新消息</h1>
+        <p>掌握綠色聯盟的最新動態與重要公告</p>
+      </section>
+
+      <section class="news-section">
+        <div class="news-card" data-aos="fade-up">
+          <div class="news-date">2025/07/01</div>
+          <h3>綠色商場動土儀式圓滿完成</h3>
+          <p>第一座結合綠建築與社區創生的永續商場正式啟動，超過300位市民參與開幕儀式。</p>
+        </div>
+        <div class="news-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="news-date">2025/06/15</div>
+          <h3>全台淨灘月開始報名</h3>
+          <p>六都同步展開「淨灘月」活動，歡迎民眾報名參加，共同守護海洋環境。</p>
+        </div>
+        <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="news-date">2025/05/20</div>
+          <h3>ESG 校園講座開跑</h3>
+          <p>與多所大專院校合作開辦 ESG 永續講座，啟發青年行動力。</p>
+        </div>
+      </section>
+    </main>
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員登入｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #eafdf1;
+    }
+    .hero-login {
+      background: linear-gradient(180deg, #a5d6a7, #f0fdf4);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .hero-login h1 {
+      font-size: 2.4rem;
+      color: #2e7d32;
+    }
+    .login-section {
+      max-width: 420px;
+      margin: 3rem auto;
+      background: #ffffffcc;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      color: #388e3c;
+      font-weight: bold;
+    }
+    form input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .form-actions a {
+      font-size: 0.9rem;
+      color: #2e7d32;
+      text-decoration: none;
+    }
+    form button {
+      margin-top: 1.5rem;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-login" data-aos="fade-in">
+        <h1>會員登入</h1>
+        <p>登入你的帳號，開始參與綠色行動！</p>
+      </section>
+
+      <section class="login-section" data-aos="fade-up">
+        <form action="#" method="POST">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">密碼</label>
+          <input type="password" id="password" name="password" required />
+
+          <div class="form-actions">
+            <a href="/register.html">還沒有帳號？</a>
+            <a href="forgot.html">忘記密碼？</a>
+          </div>
+
+          <button type="submit">登入</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>

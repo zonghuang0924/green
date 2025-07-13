@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>條款與政策｜綠色聯盟</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f6fcf4;
+      color: #333;
+    }
+    .hero-policy {
+      background: linear-gradient(180deg, #c8e6c9, #f1fdf3);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .hero-policy h1 {
+      font-size: 2.4rem;
+      color: #2e7d32;
+    }
+    .policy-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .policy-section h2 {
+      color: #388e3c;
+      margin-top: 2rem;
+    }
+    .policy-section p {
+      line-height: 1.8;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div id="nav"></div>
+
+    <main class="content">
+      <section class="hero-policy" data-aos="fade-in">
+        <h1>條款與政策</h1>
+        <p>保護你的權益與我們的責任，是綠色聯盟的基本承諾。</p>
+      </section>
+
+      <section class="policy-section" data-aos="fade-up">
+        <h2>隱私權政策</h2>
+        <p>綠色聯盟尊重並保護所有使用者的個人資料，絕不會將會員資料透露給第三方，除非經當事人同意或法律規定。所有資料僅用於活動通知、平台服務與行動倡議之推播使用。</p>
+
+        <h2>使用者條款</h2>
+        <p>本網站使用者需遵守基本網路禮儀與法律規範，不得發佈不實、歧視、誹謗或攻擊性內容。我們保留刪除違規內容與停權帳號之權利。</p>
+
+        <h2>退費與支持機制</h2>
+        <p>若您透過本平台提供捐款與支持，將依平台公告的退款標準進行處理。如遇技術問題導致交易失誤，請即聯繫我們的客服團隊，我們將盡速協助。</p>
+
+        <h2>著作與商標權</h2>
+        <p>綠色聯盟網站內所有圖文、設計與標誌皆屬本組織或合作夥伴所有，未經授權請勿轉載、修改或商業使用。如有授權需求，歡迎來信洽詢。</p>
+
+        <h2>政策更新聲明</h2>
+        <p>綠色聯盟保有隨時更新條款與政策之權利。重大異動將於網站首頁公告，並另以 Email 通知已註冊用戶。</p>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    fetch("nav.html").then(res => res.text()).then(html => document.getElementById("nav").innerHTML = html);
+    fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800, easing: 'ease-in-out', disable: 'mobile' });</script>
+</body>
+</html>
